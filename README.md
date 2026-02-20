@@ -26,6 +26,8 @@ Horiz-RTOS は、産業界のレガシーから最先端の航空宇宙用プロ
 | | **Renesas H8** | 家電制御, 車載周辺, H8/300H系 | Foundation |
 | **パチンコ・遊技機** | **V850 / RH850** | 遊技機主制御ボード (デファクト), 車載 | Foundation |
 | | **RL78** | 遊技機周辺制御, 低電力センサ | Foundation |
+| **医療・ヘルスケア** | **MSP430 (16bit)** | ペースメーカー, 血糖値トランスミッタ | Foundation |
+| | **AVR (8bit/32bit)** | 携帯型各種モニター, ローエンド医療機器 | Foundation |
 | **レガシー・教育** | **Zilog Z80 / MOS 6502** | 歴史的組み込み機器, 教育用 | Foundation |
 | | **Motorola 68000** | X68000, 初期産業用制御 | Foundation |
 | **航空宇宙** | **PowerPC (32bit)** | RAD750, 衛星搭載コンピュータ | Foundation |

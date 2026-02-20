@@ -34,6 +34,12 @@ use crate::arch::sh::ShContext as ArchContext;
 #[cfg(any(target_arch = "rx", feature = "arch-rx"))]
 use crate::arch::rx::RxContext as ArchContext;
 
+#[cfg(any(target_arch = "msp430", feature = "arch-msp430"))]
+use crate::arch::msp430::Msp430Context as ArchContext;
+
+#[cfg(any(target_arch = "avr", feature = "arch-avr"))]
+use crate::arch::avr::AvrContext as ArchContext;
+
 #[cfg(not(any(
     target_arch = "riscv32",
     target_arch = "m68k", feature = "arch-m68k",
@@ -46,7 +52,9 @@ use crate::arch::rx::RxContext as ArchContext;
     target_arch = "v850", feature = "arch-v850",
     target_arch = "rl78", feature = "arch-rl78",
     target_arch = "sh", feature = "arch-sh",
-    target_arch = "rx", feature = "arch-rx"
+    target_arch = "rx", feature = "arch-rx",
+    target_arch = "msp430", feature = "arch-msp430",
+    target_arch = "avr", feature = "arch-avr"
 )))]
 #[derive(Debug, Default, Clone, Copy)]
 pub struct DefaultContext {
@@ -66,7 +74,9 @@ pub struct DefaultContext {
     target_arch = "v850", feature = "arch-v850",
     target_arch = "rl78", feature = "arch-rl78",
     target_arch = "sh", feature = "arch-sh",
-    target_arch = "rx", feature = "arch-rx"
+    target_arch = "rx", feature = "arch-rx",
+    target_arch = "msp430", feature = "arch-msp430",
+    target_arch = "avr", feature = "arch-avr"
 )))]
 impl DefaultContext {
     pub const fn new() -> Self {
@@ -86,7 +96,9 @@ impl DefaultContext {
     target_arch = "v850", feature = "arch-v850",
     target_arch = "rl78", feature = "arch-rl78",
     target_arch = "sh", feature = "arch-sh",
-    target_arch = "rx", feature = "arch-rx"
+    target_arch = "rx", feature = "arch-rx",
+    target_arch = "msp430", feature = "arch-msp430",
+    target_arch = "avr", feature = "arch-avr"
 )))]
 use self::DefaultContext as ArchContext;
 
