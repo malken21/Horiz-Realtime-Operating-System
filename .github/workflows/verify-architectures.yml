@@ -1,0 +1,27 @@
+name: Verify Architectures
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  verify-arch:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        feature: [arch-m68k, arch-z80, arch-h8, arch-arm, arch-x86_64, arch-powerpc, arch-sparc, arch-v850, arch-rl78, arch-sh, arch-rx]
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        toolchain: stable
+
+    - name: Run cargo check for ${{ matrix.feature }}
+      run: cargo check --no-default-features --features ${{ matrix.feature }}
