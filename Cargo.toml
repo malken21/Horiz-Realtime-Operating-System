@@ -1,0 +1,31 @@
+[package]
+name = "horiz-realtime-operating-system"
+version = "0.1.1"
+edition = "2024"
+authors = ["horiz-lab"]
+description = "A high-reliability RTOS designed for industrial and aerospace applications, based on TRON specifications."
+license = "MIT"
+
+[dependencies]
+
+[features]
+default = []
+arch-m68k = []
+arch-z80 = []
+arch-h8 = []
+arch-arm = []
+arch-x86_64 = []
+arch-powerpc = []
+arch-sparc = []
+arch-v850 = []
+arch-rl78 = []
+arch-sh = []
+arch-rx = []
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = "s"
+
+[profile.dev]
+panic = "abort"
