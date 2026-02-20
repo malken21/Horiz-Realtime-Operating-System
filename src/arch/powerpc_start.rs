@@ -1,5 +1,5 @@
 /// PowerPC ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn ppc_start() -> ! {
     // 1. スタックポインタ (GPR1) の初期化
     // 2. 例外ベクタテーブル（EVPR/IVPR）の設定

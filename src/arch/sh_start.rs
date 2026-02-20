@@ -1,5 +1,5 @@
 /// SuperH ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn sh_start() -> ! {
     // 1. スタックポインタ (R15) の初期化
     // 2. VBR (ベクタベースレジスタ) の設定

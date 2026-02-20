@@ -63,7 +63,7 @@ impl RiscvContext {
 }
 
 /// RISC-V 共通トラップハンドラ
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn riscv_trap_handler() {
     // 割り込み原因 (mcause) の判定とスケジューラ呼び出し
 }

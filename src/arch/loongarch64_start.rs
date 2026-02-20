@@ -1,5 +1,5 @@
 /// LoongArch 64bit ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn loongarch64_start() -> ! {
     // 1. スタックポインタ ($sp) の設定
     // 2. スレッドポインタ ($tp) の設定

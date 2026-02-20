@@ -1,5 +1,5 @@
 /// SPARC V8 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn sparc_start() -> ! {
     // 1. スタックポインタ (O6) の初期化
     // 2. ウィンドウ無効マスク (WIM) の初期化

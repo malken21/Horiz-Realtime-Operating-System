@@ -1,5 +1,5 @@
 /// RL78 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn rl78_start() -> ! {
     // 1. スタックポインタ (SP) の初期化
     // 2. ミラー領域の設定

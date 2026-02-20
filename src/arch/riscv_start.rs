@@ -2,7 +2,7 @@
 
 /// RISC-V ブートエントリーポイント
 /// リセット直後に呼び出される（crt0の一部）
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn riscv_start() -> ! {
     // 1. スタックポインタの設定 (sp)
     // 2. グローバルポインタの設定 (gp)

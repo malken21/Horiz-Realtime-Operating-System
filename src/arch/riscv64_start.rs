@@ -1,5 +1,5 @@
 /// RISC-V 64bit ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn riscv64_start() -> ! {
     // 1. スタックポインタ (sp) の設定
     // 2. グローバルポインタ (gp) の設定

@@ -1,5 +1,5 @@
 /// Zilog Z80 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn z80_start() -> ! {
     // 1. スタックポインタ (SP) の初期化
     // 2. 割込みモード (IM 1 or 2) の設定

@@ -1,5 +1,5 @@
 /// Renesas H8/300H ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn h8_start() -> ! {
     // 1. スタックポインタ (ER7) の初期化
     // 2. 動作モード (アドレッシングモード等) の設定

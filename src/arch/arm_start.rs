@@ -1,5 +1,5 @@
 /// ARM Cortex-M ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn arm_start() -> ! {
     // 1. スタックポインタ (MSP/PSP) の初期化
     // 2. VTOR (Vector Table Offset Register) の設定

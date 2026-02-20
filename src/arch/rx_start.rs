@@ -1,5 +1,5 @@
 /// RX ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn rx_start() -> ! {
     // 1. ユーザスタックポインタ (USP) / 割込スタックポインタ (ISP) の設定
     // 2. INTB (割込テーブルレジスタ) の設定

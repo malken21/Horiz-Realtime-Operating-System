@@ -1,5 +1,5 @@
 /// MOS 6502 ブートエントリーポイント (RESET Vector)
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn m6502_start() -> ! {
     // 1. スタックポインタ ($S = 0xFF) の初期化
     // 2. 割込み禁止 (SEI)

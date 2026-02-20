@@ -1,5 +1,5 @@
 /// Microchip(Atmel) AVR ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn avr_start() -> ! {
     // 1. 割り込みベクタテーブル等の初期設定
     // 2. スタックポインタ (SP) の初期化 (SPH, SPL)

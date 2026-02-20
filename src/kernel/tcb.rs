@@ -1,4 +1,5 @@
 use crate::arch::context::Context;
+use crate::api::types::{ID, PRI, TSTAT};
 
 /// タスク制御ブロック (TCB)
 /// タスクの実行状態と管理情報を表す。

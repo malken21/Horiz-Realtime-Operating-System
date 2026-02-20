@@ -1,5 +1,5 @@
 /// TI MSP430 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn msp430_start() -> ! {
     // 1. ウォッチドッグタイマ (WDT) の停止
     // 2. スタックポインタ (SP) の初期化

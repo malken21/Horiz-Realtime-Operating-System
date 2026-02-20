@@ -1,5 +1,5 @@
 /// V850 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn v850_start() -> ! {
     // 1. スタックポインタ (r3) の初期化
     // 2. グローバルポインタ (r4)、テキストポインタ (r5) の初期化

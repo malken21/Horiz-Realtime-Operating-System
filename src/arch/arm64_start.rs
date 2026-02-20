@@ -1,5 +1,5 @@
 /// ARM64 ブートエントリーポイント
-#[no_mangle]
+#[unsafe(no_mangle)]
 pub unsafe extern "C" fn arm64_start() -> ! {
     // 1. スタックポインタ (sp_el1) の設定
     // 2. 例外レベル (EL) の確認と遷移
