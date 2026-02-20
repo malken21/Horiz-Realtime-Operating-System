@@ -1,6 +1,6 @@
 [package]
 name = "horiz-realtime-operating-system"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 authors = ["horiz-lab"]
 description = "A high-reliability RTOS designed for industrial and aerospace applications, based on TRON specifications."
