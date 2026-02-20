@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        feature: [arch-m68k, arch-z80, arch-h8, arch-arm, arch-x86_64, arch-powerpc, arch-sparc, arch-v850, arch-rl78, arch-sh, arch-rx, arch-msp430, arch-avr]
+        feature: [arch-m68k, arch-z80, arch-h8, arch-arm, arch-x86_64, arch-powerpc, arch-sparc, arch-v850, arch-rl78, arch-sh, arch-rx, arch-msp430, arch-avr, arch-mil_std_1750a]
     steps:
     - uses: actions/checkout@v4
     

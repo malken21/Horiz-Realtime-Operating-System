@@ -37,3 +37,5 @@ pub mod msp430;
 pub mod msp430_start;
 pub mod avr;
 pub mod avr_start;
+pub mod mil_std_1750a;
+pub mod mil_std_1750a_start;

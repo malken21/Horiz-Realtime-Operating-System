@@ -10,10 +10,10 @@ use crate::arch::z80::Z80Context as ArchContext;
 #[cfg(any(feature = "arch-h8"))]
 use crate::arch::h8::H8Context as ArchContext;
 
-#[cfg(any(feature = "arch-arm", all(target_arch = "arm", not(any(feature="arch-m68k", feature="arch-z80", feature="arch-h8", feature="arch-x86_64", feature="arch-powerpc", feature="arch-sparc", feature="arch-v850", feature="arch-rl78", feature="arch-sh", feature="arch-rx", feature="arch-msp430", feature="arch-avr", feature="arch-loongarch64", feature="arch-mips", feature="arch-m6502", feature="arch-arm64", feature="arch-riscv64")))))]
+#[cfg(any(feature = "arch-arm", all(target_arch = "arm", not(any(feature="arch-m68k", feature="arch-z80", feature="arch-h8", feature="arch-x86_64", feature="arch-powerpc", feature="arch-sparc", feature="arch-v850", feature="arch-rl78", feature="arch-sh", feature="arch-rx", feature="arch-msp430", feature="arch-avr", feature="arch-loongarch64", feature="arch-mips", feature="arch-m6502", feature="arch-arm64", feature="arch-riscv64", feature="arch-mil_std_1750a")))))]
 use crate::arch::arm::ArmContext as ArchContext;
 
-#[cfg(any(feature = "arch-x86_64", all(target_arch = "x86_64", not(any(feature="arch-m68k", feature="arch-z80", feature="arch-h8", feature="arch-arm", feature="arch-powerpc", feature="arch-sparc", feature="arch-v850", feature="arch-rl78", feature="arch-sh", feature="arch-rx", feature="arch-msp430", feature="arch-avr", feature="arch-loongarch64", feature="arch-mips", feature="arch-m6502", feature="arch-arm64", feature="arch-riscv64")))))]
+#[cfg(any(feature = "arch-x86_64", all(target_arch = "x86_64", not(any(feature="arch-m68k", feature="arch-z80", feature="arch-h8", feature="arch-arm", feature="arch-powerpc", feature="arch-sparc", feature="arch-v850", feature="arch-rl78", feature="arch-sh", feature="arch-rx", feature="arch-msp430", feature="arch-avr", feature="arch-loongarch64", feature="arch-mips", feature="arch-m6502", feature="arch-arm64", feature="arch-riscv64", feature="arch-mil_std_1750a")))))]
 use crate::arch::x86_64::X86_64Context as ArchContext;
 
 #[cfg(any(target_arch = "powerpc", feature = "arch-powerpc"))]
@@ -40,6 +40,9 @@ use crate::arch::msp430::Msp430Context as ArchContext;
 #[cfg(any(feature = "arch-avr"))]
 use crate::arch::avr::AvrContext as ArchContext;
 
+#[cfg(any(feature = "arch-mil_std_1750a"))]
+use crate::arch::mil_std_1750a::MilStd1750aContext as ArchContext;
+
 #[cfg(not(any(
     target_arch = "riscv32",
     feature = "arch-m68k",
@@ -54,7 +57,8 @@ use crate::arch::avr::AvrContext as ArchContext;
     feature = "arch-sh",
     feature = "arch-rx",
     feature = "arch-msp430",
-    feature = "arch-avr"
+    feature = "arch-avr",
+    feature = "arch-mil_std_1750a"
 )))]
 #[derive(Debug, Default, Clone, Copy)]
 pub struct DefaultContext {
@@ -76,7 +80,8 @@ pub struct DefaultContext {
     feature = "arch-sh",
     feature = "arch-rx",
     feature = "arch-msp430",
-    feature = "arch-avr"
+    feature = "arch-avr",
+    feature = "arch-mil_std_1750a"
 )))]
 impl DefaultContext {
     pub const fn new() -> Self {
@@ -98,7 +103,8 @@ impl DefaultContext {
     feature = "arch-sh",
     feature = "arch-rx",
     feature = "arch-msp430",
-    feature = "arch-avr"
+    feature = "arch-avr",
+    feature = "arch-mil_std_1750a"
 )))]
 use self::DefaultContext as ArchContext;
 

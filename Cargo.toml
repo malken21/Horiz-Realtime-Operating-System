@@ -23,6 +23,7 @@ arch-sh = []
 arch-rx = []
 arch-msp430 = []
 arch-avr = []
+arch-mil_std_1750a = []
 
 [profile.release]
 panic = "abort"

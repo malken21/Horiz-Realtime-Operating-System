@@ -32,6 +32,7 @@ Horiz-RTOS は、産業界のレガシーから最先端の航空宇宙用プロ
 | | **Motorola 68000** | X68000, 初期産業用制御 | Foundation |
 | **航空宇宙** | **PowerPC (32bit)** | RAD750, 衛星搭載コンピュータ | Foundation |
 | | **SPARC (V8)** | LEON シリーズ (ESA/JAXA採用) | Foundation |
+| | **MIL-STD-1750A (16bit)** | 軍用機, ミサイル制御, 人工衛星 | Foundation |
 
 ## 主要な信頼性・リアルタイム機能
 
